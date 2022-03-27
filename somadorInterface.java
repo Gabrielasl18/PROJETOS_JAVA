@@ -20,7 +20,7 @@ JTextField caixa2 = new JTextField("digite aqui");
 JTextField resultado = new JTextField("resultado");
 JTextField caixa1 = new JTextField("digite aqui");
 
-    public void actionPerformed(ActionEvent e){//método actionPerformed trata o JButton
+    public void actionPerformed(ActionEvent e){
         if(e.getSource() == jb){
             int n1 = Integer.parseInt(caixa1.getText());
             int n2 = Integer.parseInt(caixa2.getText());
@@ -28,8 +28,8 @@ JTextField caixa1 = new JTextField("digite aqui");
             resultado.setText(String.valueOf(result));
         }
         if(e.getSource() == jb3){
-            int simnao;
-            simnao = JOptionPane.showConfirmDialog(null,"deseja sair?");
+        int simnao;
+        simnao = JOptionPane.showConfirmDialog(null,"deseja sair?");
             if(simnao == JOptionPane.YES_OPTION){
             JOptionPane.showMessageDialog(null,"Adeus!");
             System.exit(0);
@@ -56,11 +56,11 @@ JTextField caixa1 = new JTextField("digite aqui");
     jb.addActionListener(this);
     jb2.addActionListener(this);
     jb3.addActionListener(this);
-    setLayout(null); // componente(botao) sai da janela
-    jb.setBounds(50,405,150,60);//posicao horizontal(x) e vertical(y),largura e altura.
+    setLayout(null);
+    jb.setBounds(50,405,150,60);
     jb2.setBounds(230,405,120,60);
     jb3.setBounds(600,511,80,30);
-    add(jb);//getContentPane().add(jb) vai retornar a área da janela que da pra adicionar um componente.
+    add(jb);
     add(jb2);
     add(jb3);
     legenda1.setBounds(50,50,200,100);
@@ -80,6 +80,6 @@ JTextField caixa1 = new JTextField("digite aqui");
     setVisible(true);
     }
     public static void main(String args[]){
-        new somadorInterface();//instanciando a janela
+        new somadorInterface();
     }
 }
